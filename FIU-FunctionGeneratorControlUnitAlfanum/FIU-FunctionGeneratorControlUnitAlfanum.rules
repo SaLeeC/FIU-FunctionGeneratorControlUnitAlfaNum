@@ -1,0 +1,144 @@
+
+(rules PCB AlimentatoreDaBancoExATX
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 3917)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 5.9)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.2)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 1000.2 (type default_240VAC))
+    (clear 50.0 (type smd_smd))
+    (clear 1000.2 (type smd_240VAC))
+    (clear 1000.2 (type "kicad_default"_240VAC))
+    (clear 1000.2 (type 240VAC_240VAC))
+    (clear 1000.2 (type 240VAC_PowerBT))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_7000:3500_um"
+    (shape
+      (circle F.Cu 7000.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 7000.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_7000:3500_um" "Via[0-1]_7000:3500_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_7000:3500_um-kicad_default" "Via[0-1]_7000:3500_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_800:400_um-240VAC" "Via[0-1]_800:400_um" 240VAC
+  )
+  (via 
+    "Via[0-1]_7000:3500_um-240VAC" "Via[0-1]_7000:3500_um" 240VAC
+  )
+  (via 
+    "Via[0-1]_800:400_um-PowerBT" "Via[0-1]_800:400_um" PowerBT
+  )
+  (via 
+    "Via[0-1]_7000:3500_um-PowerBT" "Via[0-1]_7000:3500_um" PowerBT
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (via_rule
+    240VAC "Via[0-1]_800:400_um-240VAC"
+  )
+  (via_rule
+    PowerBT "Via[0-1]_800:400_um-PowerBT"
+  )
+  (class default
+    "unconnected-(OLED1-Pad2)" "Net-(C2-Pad1)" "Net-(JP1-Pad2)" "Net-(JP2-Pad2)" "Net-(JP3-Pad2)" "/Display Unit/OLED1-CS" "/Display Unit/RES-OLED" "unconnected-(OLED1-Pad13)"
+    "unconnected-(OLED1-Pad14)" "Net-(C3-Pad1)" "/Display Unit/D{slash}C-OLED" "unconnected-(OLED1-Pad18)" "unconnected-(OLED1-Pad19)" "unconnected-(OLED1-Pad20)" "unconnected-(OLED2-Pad2)" "Net-(OLED1-Pad5)"
+    "/Display Unit/SCLK-OLED" "unconnected-(OLED2-Pad13)" "unconnected-(OLED2-Pad14)" "Net-(OLED2-Pad5)" "unconnected-(OLED2-Pad18)" "unconnected-(OLED2-Pad19)" "unconnected-(OLED2-Pad20)" "/Display Unit/MOSI-OLED"
+    "/Display Unit/OLED2-CS" "/Push Button Unit/Exp1-SDA" "/Push Button Unit/Exp1-SCL" "Net-(RN1-Pad2)" "Net-(RN1-Pad3)" "Net-(RN1-Pad4)" "Net-(RN1-Pad5)" "Net-(RN1-Pad6)"
+    "Net-(RN1-Pad7)" "Net-(RN1-Pad8)" "Net-(RN1-Pad9)" "/Push Button Unit/Exp1-Int" "unconnected-(SW3-Pad1)" "unconnected-(SW3-Pad4)" "unconnected-(SW1-Pad1)" "unconnected-(SW1-Pad4)"
+    "/Push Button Unit/Button-Mode" "/Push Button Unit/Button-SelF" "unconnected-(SW2-Pad1)" "unconnected-(SW2-Pad4)" "/Push Button Unit/Button-3" "/Push Button Unit/Button-4" "unconnected-(SW4-Pad1)" "unconnected-(SW4-Pad4)"
+    "Net-(J3-Pad1)" "unconnected-(U2-Pad4)" "Net-(D1-Pad2)" "Net-(J3-Pad2)" "Net-(J2-Pad4)" "unconnected-(BT1-Pad1)" "unconnected-(BT1-Pad2)" "unconnected-(BT1-Pad3)"
+    "unconnected-(BT1-Pad4)" "unconnected-(BT1-Pad5)" "unconnected-(BT1-Pad6)" "unconnected-(BT1-Pad7)" "/Push Button Unit/Up1" "/Push Button Unit/Up0" "/Push Button Unit/Up2" "/Push Button Unit/Up3"
+    "unconnected-(BT1-Pad18)" "Net-(BT1-Pad8)" "Net-(BT1-Pad9)" "Net-(BT1-Pad16)" "Net-(BT1-Pad17)"
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class 240VAC
+    "Net-(J5-Pad2)" "Net-(J5-Pad1)" "Net-(J6-Pad2)"
+    (clearance_class 240VAC)
+    (via_rule 240VAC)
+    (rule
+      (width 500.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class PowerBT
+    GND +3V3 +12V
+    (clearance_class PowerBT)
+    (via_rule PowerBT)
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
